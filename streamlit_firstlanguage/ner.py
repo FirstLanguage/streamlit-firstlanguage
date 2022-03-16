@@ -114,7 +114,7 @@ def ner(name, apiKey, nerText=True, title=None, txtAreaLabel=None,
     if nerText:
         with st.container():
             if overRideColor is not None:
-                colors = overRideColor
+                global colors; colors = overRideColor
 
 
             if title is not None:
@@ -148,7 +148,7 @@ def ner(name, apiKey, nerText=True, title=None, txtAreaLabel=None,
     else:
         with st.container():
             if overRideColor is not None:
-                colors = overRideColor
+                global colors; colors = overRideColor
 
             if title is not None:
                 st.subheader(title)
