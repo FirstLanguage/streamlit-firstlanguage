@@ -37,7 +37,30 @@ fl.firstlanguage_ner(name="fl_ner",apiKey="<Your_API_Key>")
 
 You can then run your app with 
 ```bash
-streamlit run streamlit_app.py
+streamlit run ner.py
 ```
 The app should pop up in your web browser.
+
+Below is a list of NLP Tasks that you can access with our API,
+
+
+
+| NLP Task    | Streamlit Component   |
+|--------------|------------|
+|  Stemmer      |  firstlanguage_stem()        |
+|  Lemmatizer     |  firstlanguage_lemma()        |
+|  Morphological Analyzer      |  firstlanguage_morph()        |
+|  POSTagger      |  firstlanguage_postag()        |
+|  Text Classification       |  firstlanguage_classify()        |
+|  Question Answering     |  firstlanguage_qa()        |
+|  Table Question Answering     |  firstlanguage_tableqa()        |
+|  Image Captioning     |  firstlanguage_imagecaption()        |
+|  Named Entity Recognition     |  firstlanguage_ner()        |
+|  Summarization     |  firstlanguage_summary()        |
+|  Translation     |  firstlanguage_translate()        |
+
+
+Name and APIKey is the only required params to access the component. Most of the component elements are configurable.
+
+
 
