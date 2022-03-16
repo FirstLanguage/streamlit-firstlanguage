@@ -1,4 +1,4 @@
-<a href="https://www.firstlanguage.in"><img src="https://img.firstlanguage.in/img/Original_9M3zC4lrHRd.webp?tr=w-100" width="125" height="125" align="right" />
+<a href="https://www.firstlanguage.in"><img src="https://img.firstlanguage.in/img/Original_9M3zC4lrHRd.webp?tr=w-150" width="100" height="100" align="right" />
 </a>
 
 # streamlit-firstlanguage: Streamlit Components to access FirstLanguage NLP API
