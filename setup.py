@@ -2,7 +2,7 @@ import setuptools
 
 setuptools.setup(
     name="streamlit-firstlanguage",
-    version="1.0.0",
+    version="1.0.1",
     author="Selva",
     author_email="selva@firstlangauge.in",
     description="Streamlit components for FirstLanguage API",
