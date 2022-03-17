@@ -3,3 +3,4 @@ firstlanguage-python
 jsonpickle
 pandas
 st-annotated-text
+streamlit-firstlanguage
