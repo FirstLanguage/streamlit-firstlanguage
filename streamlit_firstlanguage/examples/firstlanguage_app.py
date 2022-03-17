@@ -1,6 +1,28 @@
 import streamlit_firstlanguage as fl
 import streamlit as st
 
+colors = {
+    "ADJ": "#a5129e",
+    "ADP": "#fe0b44",
+    "ADV": "#cc979a",
+    "AUX": "#52a26d",
+    "CONJ": "#05dddc",
+    "CCONJ": "#4f5b9d",
+    "DET": "#e59607",
+    "INTJ": "#448939",
+    "NOUN": "#d66fba",
+    "NUM": "#839663",
+    "PART": "#c5a331",
+    "PRON":"#d66fba",
+    "PROPN": "#fee57f",
+    "PUNCT": "#1abe47",
+    "SCONJ": "#5e5d97",
+    "SYM": "#ed5786",
+    "VERB": "#f7ce22",
+    "X": "#2da640",
+    "EOL": "#5e5d97",
+    "SPACE": "#a9cf46",
+}
 
 nlpTask = st.selectbox(
         "Select the NLP Task to test",
