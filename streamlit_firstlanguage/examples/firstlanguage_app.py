@@ -24,7 +24,7 @@ colors = {
     "SPACE": "#a9cf46",
 }
 
-st.title("FirstLanguage Stremalit Components Demo")
+st.title("FirstLanguage Streamlit Components Demo")
 
 nlpTask = st.selectbox(
         "Select the NLP Task to test",
