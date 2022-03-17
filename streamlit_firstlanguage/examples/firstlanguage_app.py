@@ -8,6 +8,7 @@ nlpTask = st.selectbox(
         "Image Captioning","Named Entity Recognition","Summarization","Translation" )
         )
 
+st.write("If there is any error, it may be due to API throttling. Please wait for a while and try again.")
 
 if nlpTask == "Stemmer":
     fl.firstlanguage_stem("fl_ner",st.secrets["api_key"], title="Stemmer",resTitle="Stemmed Text")
