@@ -6,6 +6,8 @@ from annotated_text import annotated_text
 from annotated_text import annotation
 import pandas as pd
 from htbuilder.units import unit
+import sys
+thismodule = sys.modules[__name__]
 
 # Only works in 3.7+: from htbuilder.units import px, rem, em
 px = unit.px
@@ -14,7 +16,7 @@ em = unit.em
 
 
 
-colors = {
+thismodule.colors = {
     "ADJ": "#a5129e",
     "ADP": "#fe0b44",
     "ADV": "#cc979a",
@@ -73,7 +75,7 @@ def get_postag_with_txt(text, apiKey, lang="en", lineBreak=4):
     count = 0
     for postag in result:    
         count +=1
-        taggedWord = annotation(postag.original_text, postag.postag, colors[postag.postag], font_size=em(1.1), font_weight="bold")
+        taggedWord = annotation(postag.original_text, postag.postag, thismodule.colors[postag.postag], font_size=em(1.1), font_weight="bold")
         text_array.append(taggedWord)
         if count == lineBreak:
             text_array.append("  ")
@@ -115,7 +117,7 @@ def get_postag_with_url(url, apiKey,contentType, lang="en", lineBreak=4):
     count = 0
     for postag in result:    
         count +=1
-        taggedWord = annotation(postag.original_text, postag.postag, colors[postag.postag], font_size=em(1.1), font_weight="bold")
+        taggedWord = annotation(postag.original_text, postag.postag, thismodule.colors[postag.postag], font_size=em(1.1), font_weight="bold")
         text_array.append(taggedWord)
         if count == lineBreak:
             text_array.append("  ")
@@ -130,7 +132,7 @@ def postag(name, apiKey, posText=True, title=None, txtAreaLabel=None,
     if posText:
         with st.container():
             if overRideColor is not None:
-                global colors; colors = overRideColor
+                thismodule.colors = overRideColor
 
             if title is not None:
                 st.subheader(title)
@@ -163,7 +165,7 @@ def postag(name, apiKey, posText=True, title=None, txtAreaLabel=None,
     else:
         with st.container():
             if overRideColor is not None:
-                global colors; colors = overRideColor
+                thismodule.colors = overRideColor
 
             if title is not None:
                 st.subheader(title)

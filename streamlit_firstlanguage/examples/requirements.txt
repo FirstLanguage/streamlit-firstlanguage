@@ -2,6 +2,6 @@ streamlit >= 0.63
 firstlanguage-python >= 2.5.0
 jsonpickle
 numpy
-pandas >= 1.4.1
+pandas
 st-annotated-text >= 3.0.0
-streamlit-firstlanguage
+streamlit-firstlanguage >= 1.0.2

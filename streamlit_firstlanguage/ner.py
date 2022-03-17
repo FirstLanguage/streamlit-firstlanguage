@@ -6,14 +6,16 @@ from annotated_text import annotated_text
 from annotated_text import annotation
 import pandas as pd
 from htbuilder.units import unit
+import sys
+thismodule = sys.modules[__name__]
 
 # Only works in 3.7+: from htbuilder.units import px, rem, em
 px = unit.px
 rem = unit.rem
 em = unit.em
 
-
-colors = {
+ 
+thismodule.colors = {
     "DATE": "#a5129e",
     "Cuisine": "#fe0b44",
     "Dish": "#cc979a",
@@ -64,7 +66,7 @@ def get_ner_with_txt(text, apiKey, lang="en"):
         splits[index] = annotation(split , font_size=em(1.1),padding_right=".01rem", padding_left=".01rem",background="#ffffff")
         for ner in result:
             if split == ner.word:
-                taggedWord = annotation(split, ner.entity_group, colors[ner.entity_group], font_size=em(1.1), font_weight="bold")
+                taggedWord = annotation(split, ner.entity_group, thismodule.colors[ner.entity_group], font_size=em(1.1), font_weight="bold")
                 splits[index] = taggedWord
     return splits
 
@@ -101,7 +103,7 @@ def get_ner_with_url(url, apiKey,contentType, lang="en"):
     text_array = []
     
     for ner in result:    
-        taggedWord = annotation(ner.word, ner.entity_group, colors[ner.entity_group], font_size=em(1.1), font_weight="bold")
+        taggedWord = annotation(ner.word, ner.entity_group, thismodule.colors[ner.entity_group], font_size=em(1.1), font_weight="bold")
         text_array.append(taggedWord)
        
     return text_array
@@ -114,7 +116,7 @@ def ner(name, apiKey, nerText=True, title=None, txtAreaLabel=None,
     if nerText:
         with st.container():
             if overRideColor is not None:
-                global colors; colors = overRideColor
+                thismodule.colors = overRideColor
 
 
             if title is not None:
@@ -148,7 +150,7 @@ def ner(name, apiKey, nerText=True, title=None, txtAreaLabel=None,
     else:
         with st.container():
             if overRideColor is not None:
-                global colors; colors = overRideColor
+                thismodule.colors = overRideColor
 
             if title is not None:
                 st.subheader(title)
