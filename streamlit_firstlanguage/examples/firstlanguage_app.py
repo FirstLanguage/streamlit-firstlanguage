@@ -42,7 +42,7 @@ if nlpTask == "Morphological Analyzer":
     fl.firstlanguage_morph("fl_morph",st.secrets["api_key"], title="Morphological Analyzer",resTitle="Morphological Analysis Output")
 
 if nlpTask == "POSTagger":
-    fl.firstlanguage_postag("fl_pos",st.secrets["api_key"], title="POSTagger",resTitle="POS Tagger Output")
+    fl.firstlanguage_postag("fl_pos",st.secrets["api_key"], title="POSTagger",resTitle="POS Tagger Output", overRideColor=colors)
 
 if nlpTask == "Text Classification":
     fl.firstlanguage_classify("fl_classify",st.secrets["api_key"], title="Text Classification",resTitle="Text Classification Output")
