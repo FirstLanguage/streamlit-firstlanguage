@@ -67,4 +67,5 @@ if nlpTask == "Summarization":
 if nlpTask == "Translation":
     fl.firstlanguage_translate("fl_translate",st.secrets["api_key"], title="Translation",resTitle="Translated Text")
     
-uploaded_file = st.file_uploader("Choose a file")    
+title = st.text_input('Movie title', 'Life of Brian')
+st.write('The current movie title is', title)
