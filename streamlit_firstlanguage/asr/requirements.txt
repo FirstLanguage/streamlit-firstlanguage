@@ -1,0 +1,6 @@
+streamlit >= 0.63
+copy
+pathlib
+st_on_hover_tabs
+nvidia-riva-client
+typing

@@ -12,7 +12,6 @@ import riva.client
 import riva.client.audio_io
 import riva.client.proto.riva_asr_pb2 as rasr
 import streamlit as st
-import json
 from st_on_hover_tabs import on_hover_tabs
 
 
